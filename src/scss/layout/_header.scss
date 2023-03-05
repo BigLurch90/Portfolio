@@ -1,0 +1,68 @@
+@use '../components/buttons' as button;
+
+.site-header {
+    background-color: var(--color-dark);
+    height: 7vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    // padding: 0 var(--gap-xl);
+    z-index: 999;
+    border-bottom: 4px double var(--color-accent-200);
+    border-radius: 0 0 20px 20px;
+
+    &__inner {
+        grid-column: inner;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    &__logo {
+        color: var(--color-accent-900);
+        font-family: "aviano-flare", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+
+        svg {
+            height: 1.7rem;
+            margin-right: 0.7rem;
+        }
+    }
+
+}
+
+.menu {
+
+    &__list {
+        display: flex;
+        gap: var(--gap-m);
+        text-decoration: none;
+        list-style: none;
+        align-items: center;
+        margin: 0;
+
+    }
+    
+    &__item {
+        color: var(--color-accent-500);
+        
+        &-current {
+            font-size: 700;
+            color: var(--color-accent-900);
+        }
+
+        &:last-of-type {
+            @include button.default(
+            $color: var(--color-accent-500),
+            $border-color: var(--color-accent-900),
+            $hover-color: var(--color-accent-900),
+            ); 
+            font-size: 1rem;
+        }
+    }
+}

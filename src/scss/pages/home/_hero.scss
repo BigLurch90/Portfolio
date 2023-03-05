@@ -1,0 +1,113 @@
+.hero {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    // height: 100vh;
+    background-color: var(--color-dark-200);
+    position: relative;
+    width: 100%;
+    
+    &__inner {
+        grid-column: inner;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+    
+    &__content {
+        grid-column: 1/2;
+        margin-top: var(--section-gap);
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    
+    
+    &__title {
+        font-family: "bilo", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: var(--font-size-6);
+        text-align: left;
+        color: var(--color-accent-700);
+        margin: 0;
+        line-height: var(--line-height);
+        margin-bottom: calc(var(--section-gap-inner) * 0.5);
+        
+        &-sub {
+            font-family: "bilo", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            text-align: left;
+            margin: 0;
+            color: var(--color-accent-700);
+        }
+    }
+}
+
+.ribbon {
+    width: 600px;
+    position: fixed;
+    top: 70vh;
+    text-align: center;
+    font-size: 20px;
+    background: #F0C26B;
+    background: linear-gradient(to bottom, #F0C26B, #886E3E);
+    box-shadow: rgba(0,0,0,0.3) 0 1px 1px;
+    font-family: 'Helvetica Neue',Helvetica, sans-serif;
+    border-radius: 2px;
+
+
+    p {
+        font-size: 2rem;
+        color: #232B5E;
+        text-shadow: #939097 0 1px 0;
+        margin: 3px;
+        padding: 0;
+    }
+
+    i {
+        margin: 0 2rem;
+    }
+
+
+}
+
+
+
+.hero-doc {
+    
+    
+    span {
+        background: #060670;
+        background: linear-gradient(to left, #060670 0%, #92961a 50%, #060670 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px var(--color-accent-700);
+    }
+
+    }
+    
+.hero-bg {
+    position: relative;
+    height: 83vh;
+    background-color: var(--color-dark-200);
+    
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom: 83vh solid transparent;
+        border-left: 400px solid var(--color-dark-200);
+        width: 0;
+      }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 83vh solid transparent;
+    border-right: 200px solid var(--color-dark-200);
+    width: 0;
+  }
+}

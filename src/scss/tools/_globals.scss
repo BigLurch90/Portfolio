@@ -1,0 +1,61 @@
+:root {
+
+    --section-gap: 2rem;
+    --section-gap-inner: calc( var(--section-gap) * 0.75 );
+    
+    --gap-xl: 4rem;
+    --gap-l: 3rem;
+    --gap-m: 2rem;
+    --gap-s: 1rem;
+
+    --border-radius: 0px;
+
+    --color-dark: #111022;
+    --color-dark-200: #111325;
+    --color-dark-300: #171b36;
+    --color-dark-500: #1b2144;
+    --color-dark-600: #1c2249;
+    --color-dark-700: #232b5e;
+    --color-dark-800: #2c3574;
+    --color-dark-900: #37418b;
+
+    --color-accent: #312917;
+    --color-accent-200: #3f341d;
+    --color-accent-300: #534426;
+    --color-accent-400: #6b5731;
+    --color-accent-500: #886e3e;
+    --color-accent-600: #a8884d;
+    --color-accent-700: #c29d58;
+    --color-accent-800: #dbb162;
+    --color-accent-900: #f0c26b;
+    
+    --color-light: #f3f1f5;
+    --color-light-200: #dad7dd;
+    --color-light-300: #bcb9c0;
+    --color-light-400: #9d9ba0;
+    --color-light-500: #939097;
+    --color-light-600: #7e7b81;
+    --color-light-700: #6c6a6e;
+    --color-light-800: #57555a;
+    --color-light-900: #444246;
+
+    --font-sans: 'Arial', sans-serif;
+    --font-serif: 'Georgia', serif;
+
+    --line-height: 1.5;
+
+    --font-scale: 1.25;
+    --font-size: 1.125rem;
+
+    --font-size-1: var(--font-size);
+    --font-size-2: calc( var(--font-size-1) * var(--font-scale));
+    --font-size-3: calc( var(--font-size-2) * var(--font-scale));
+    --font-size-4: calc( var(--font-size-3) * var(--font-scale));  
+    --font-size-5: calc( var(--font-size-4) * var(--font-scale));  
+    --font-size-6: calc( var(--font-size-5) * var(--font-scale));  
+
+    
+    --page-inner: 90rem;
+    --grid-container: minmax(2rem, 1fr) [inner-start] minmax(0, var(--page-inner)) [inner-end] minmax(2rem, 1fr);
+
+}

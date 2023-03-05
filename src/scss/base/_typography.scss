@@ -1,0 +1,58 @@
+body {
+    font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "bilo", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-family: var(--font-serif);
+}
+
+h1 {
+    
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+
+h6 {
+
+}
+
+p {
+    font-family: "bilo", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: var(--line-height);
+}
+
+a {
+    font-family: "bilo", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--color-accent-500);
+    text-decoration: none;
+    line-height: var(--line-height);
+    &:hover {
+        color: var(--color-accent-900);
+    }
+}
+
+li {
+    line-height: var(--line-height);
+}

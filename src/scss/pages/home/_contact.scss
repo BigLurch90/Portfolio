@@ -1,0 +1,119 @@
+.contact {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    // height: 100vh;
+    background-color: var(--color-dark-200);
+    position: relative;
+    width: 100%;
+    
+    &__inner {
+        grid-column: inner;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__content {
+        grid-column: 2/3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+.contact-img {
+    height: 83vh;
+    background: var(--color-dark-200);
+    position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom: 83vh solid var(--color-dark-200);
+        border-right: 250px solid transparent;
+        width: 0;
+      }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 83vh solid var(--color-dark-200);
+    border-left: 500px solid transparent;
+    width: 0;
+  }
+}
+
+.contact-card {
+    margin-top: var(--section-gap);
+    color: var(--color-accent-700);
+    text-align: left;
+    
+    &__title {
+        color: var(--color-accent-900);
+        margin: 0;
+        font-family: "bilo", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        transform: translatex(-570px);
+        margin-bottom: var(--section-gap-inner);
+    }
+    
+    &__text1 {
+        transform: translatex(-500px);
+        margin: 0;
+        margin-bottom: var(--gap-m);
+    }
+    
+    &__text2 {
+        transform: translatex(-460px);
+        margin: 0;
+        margin-bottom: var(--gap-m);
+    }
+    
+    &__text3 {
+        transform: translatex(-420px);
+        margin: 0;
+        margin-bottom: var(--gap-m);
+        
+    }
+    
+    &__text4 {
+        transform: translatex(-380px);
+        margin: 0;
+
+    }
+}
+
+.contact-form {
+    color: var(--color-accent-700);
+    // padding: var(--gap-m) 0 var(--gap-m) var(--gap-l);
+    width: 30rem;
+    transform: translateY(-200px);
+    
+
+    &__title {
+        font-family: "bilo", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: var(--font-size-4);
+        margin: 0;
+        margin-bottom: var(--gap-m);
+    }
+    
+    input, textarea {
+        margin-bottom: var(--gap-m);
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    &__row {
+        display: flex;
+        gap: var(--gap-l);
+    }
+    
+}

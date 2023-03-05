@@ -1,0 +1,5 @@
+@use 'tools/globals';   // Custom Properties
+@use 'base';            // Typography, Reset etc
+@use 'layout';          // Header, Footer etc
+@use 'pages';           // Home, Contect etc
+@use 'vendor';          // Third party styles

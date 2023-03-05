@@ -1,0 +1,16 @@
+// Responsive Mixins
+// Usage ex: @use '../tools/responsive';
+// @include responsive.max( size ) {...}
+// @include responsive.min( size ) {...}
+
+@mixin max($breakpaint: 480px) {
+    @media screen and ( max-width: $breakpaint ) {
+        @content;        
+    }    
+}
+
+@mixin min($breakpaint: 1440px) {
+    @media screen and ( min-width: $breakpaint ) {
+        @content;        
+    }    
+}

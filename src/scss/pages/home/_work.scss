@@ -1,0 +1,109 @@
+@use '../../components/buttons' as button;
+
+.work {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    margin-top: var(--section-gap);
+    // margin: var(--section-gap) 0 0 var(--section-gap-inner);
+    position: relative;
+    width: 100%;
+    
+    &__inner {
+        grid-column: inner;
+        color: var(--color-accent-500);
+        text-align: center;
+            
+            h2 {
+                color: var(--color-accent-900);
+                font-family: "bilo", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                margin: 0;
+                text-align: left;
+            }
+    }
+}
+
+
+.work-card {
+    // display: grid;
+    // grid-template-columns: var(--grid-container);
+    margin-top: var(--gap-s);
+    
+    
+    &__inner {
+        // grid-column: inner;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: var(--gap-s);
+        column-gap: var(--gap-s);
+    }
+
+    &__content {
+        display: none;
+        
+        &--current {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            display: block;
+            text-align: left;
+            border-radius: 40px;
+            border-top: 4px double var(--color-accent-200);
+            border-left: 4px double var(--color-accent-200);
+
+        }
+    }
+    
+    &__title {
+        color: var(--color-accent-900);
+        font-family: "bilo", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        margin: var(--gap-s) 0 var(--gap-m) var(--gap-m);
+        font-size: var(--font-size-3);
+    }
+
+    &__text {
+        margin: 0 var(--gap-m) var(--gap-s) var(--gap-m);
+    }
+
+    &__footer {
+        @include button.default(
+            $color: var(--color-accent-500),
+            $border-color: var(--color-accent-900),
+            $hover-color: var(--color-accent-900),
+            );
+            margin: var(--gap-s) 0 0 var(--gap-m);
+        }
+        
+        &__img {
+            margin: 0;
+            max-height: 300px;
+            float: right;
+            opacity: 0.5;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            
+            &--button {
+                position: absolute;
+                z-index: 99;
+                
+                @include button.default(
+                    $background: var(--color-accent-200),
+                    $color: var(--color-accent-500),
+                    $border-color: transparent,
+                    $hover-color: var(--color-accent-900),
+                    );
+                display: block;
+                border-radius: 0 0 50px 0;
+            }
+
+            &--current {
+                border: 1px solid var(--color-accent-900);
+                opacity: 1;
+            }
+    
+        }
+}

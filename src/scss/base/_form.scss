@@ -1,0 +1,53 @@
+@use '../components/buttons' as button;
+
+::placeholder {
+    color: var(--color-accent-500);
+}
+
+input, button {
+    &[type="text"],
+    &[type="email"],
+    &[type="tel"] {
+        max-width: 100%;
+        width: 100%;
+        border: 1px solid var(--color-accent-500);
+        background-color: var(--color-dark-200);
+        padding: 0.5rem 1rem;
+        font-size: var(--font-size-2);
+        font-family: "bilo", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        &:focus {
+            outline: 0;
+            border-color: var(--color-accent-900);
+        }
+    }
+
+    &[type="submit"] {
+        @include button.default(
+            $color: var(--color-accent-500),
+            $border-color: var(--color-accent-900),
+            $hover-color: var(--color-accent-900),
+            );
+            font-family: "bilo", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+    }
+
+}
+
+textarea {
+    border: 1px solid var(--color-accent-500);
+    background-color: var(--color-dark-200);
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-2);
+    font-family: "bilo", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    max-width: 100%;
+    width: 100%;
+    &:focus {
+        outline: 0;
+        border-color: var(--color-accent-900);
+    }
+}
